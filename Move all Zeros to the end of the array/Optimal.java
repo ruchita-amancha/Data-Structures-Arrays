@@ -14,11 +14,14 @@ public class Optimal {
             }
         }
 
-        if(j==-1) return arr;
+        if (j == -1) {
+            return arr;
+        }
 
-        for (int i = j+1; i < n; i++) {
-            if(arr[i]!=0){
-                swap(arr,i,j);
+        // if element is non-zeror then we swap  so that non-zeror ele comes ahead and zeror elemnt is in the last
+        for (int i = j + 1; i < n; i++) {
+            if (arr[i] != 0) {
+                swap(arr, i, j);
                 j++;
             }
         }
@@ -26,10 +29,10 @@ public class Optimal {
 
     }
 
-    public static void swap(int arr[],int i,int j){
-        int temp=arr[i];
-        arr[i]=arr[j];
-        arr[j]=temp;
+    public static void swap(int arr[], int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void main(String[] args) {
